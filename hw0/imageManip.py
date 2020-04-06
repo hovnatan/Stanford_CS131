@@ -1,10 +1,10 @@
-import numpy as np
-from PIL import Image
-import matplotlib.pyplot as plt
 import math
-from skimage import color
-from skimage import io
+import numpy as np
+import matplotlib.pyplot as plt
+
 from PIL import Image
+from skimage import io, color
+
 
 def load(image_path):
     """ Loads an image from a file path
@@ -67,6 +67,7 @@ def convert_to_grey_scale(image):
 
     return out
 
+
 def rgb_decomposition(image, channel):
     """ Return image **excluding** the rgb channel specified
 
@@ -89,6 +90,7 @@ def rgb_decomposition(image, channel):
     ### END YOUR CODE
 
     return out
+
 
 def lab_decomposition(image, channel):
     """ Return image decomposed to just the lab channel specified
@@ -116,6 +118,7 @@ def lab_decomposition(image, channel):
 
     return out
 
+
 def hsv_decomposition(image, channel='H'):
     """ Return image decomposed to just the hsv channel specified
 
@@ -139,6 +142,7 @@ def hsv_decomposition(image, channel='H'):
     ### END YOUR CODE
 
     return out
+
 
 def mix_images(image1, image2, channel1, channel2):
     """ Return image which is the left of image1 and right of image 2 excluding

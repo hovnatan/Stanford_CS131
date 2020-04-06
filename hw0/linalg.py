@@ -20,6 +20,7 @@ def dot_product(vector1, vector2):
 
     return out
 
+
 def matrix_mult(M, vector1, vector2):
     """ Implement (vector1.T * vector2) * (M * vector1)
     Args:
@@ -33,11 +34,12 @@ def matrix_mult(M, vector1, vector2):
     out = None
     ### YOUR CODE HERE
 
-    out = np.matmul(vector1.T, vector2) *  np.matmul(M, vector1)
+    out = np.matmul(vector1.T, vector2) * np.matmul(M, vector1)
 
     ### END YOUR CODE
 
     return out
+
 
 def svd(matrix):
     """ Implement Singular Value Decomposition
@@ -60,6 +62,7 @@ def svd(matrix):
 
     return u, s, v
 
+
 def get_singular_values(matrix, n):
     """ Return top n singular values of matrix
     Args:
@@ -78,6 +81,7 @@ def get_singular_values(matrix, n):
     ### END YOUR CODE
     return singular_values
 
+
 def eigen_decomp(matrix):
     """ Implement Eigen Value Decomposition
     Args:
@@ -95,6 +99,7 @@ def eigen_decomp(matrix):
     ### END YOUR CODE
     return w, v
 
+
 def get_eigen_values_and_vectors(matrix, num_values):
     """ Return top n eigen values and corresponding vectors of matrix
     Args:
@@ -111,7 +116,7 @@ def get_eigen_values_and_vectors(matrix, num_values):
     ### YOUR CODE HERE
 
     eigen_values = w[0:num_values]
-    eigen_vectors= v[0:num_values]
+    eigen_vectors = v[0:num_values]
 
     ### END YOUR CODE
     return eigen_values, eigen_vectors
